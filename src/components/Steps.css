@@ -1,0 +1,63 @@
+.steps{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.steps::after{
+    content: "";
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    top: 20px;
+}
+
+.step{
+    text-align: center;
+    background-color: #ffff;
+    z-index: 1;
+    width: 120px;
+    padding: 0.5rem;
+}
+
+.step svg{
+    font-size: 1.6rem;
+    margin-bottom: .2rem;
+}
+
+.active{
+    font-weight: bold;
+}
+
+.active > svg{
+    fill: #7076f4;
+}
+
+/* Media query para telas menores que 500px */
+@media (max-width: 500px) {
+    .steps{
+        min-width: 100px;
+        gap: 2rem;
+    }
+
+    .steps::after{
+        width: 200px;
+    }
+
+    .step{
+        width: 80px;
+    }
+    
+    .step svg{
+        font-size: 1.4rem;
+    }
+    .step p{
+        font-size: 0.9rem;
+    }
+  
+  }
